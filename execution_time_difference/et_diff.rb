@@ -46,12 +46,12 @@ def sub_sum_fast(array)
   max_as_yet = array.first
   current_sequence_sum = array.first
 
-  array[1..-1].each do |el|
+  array.each do |el|
     current_sequence_sum = [el, current_sequence_sum + el].max
     max_as_yet = [current_sequence_sum, max_as_yet].max
   end
   max_as_yet
 end
 
-list = [2, 3, -6, 7, -6, 7]
+list = [1,2,-4,4,-3,4]
 p sub_sum_fast(list)
